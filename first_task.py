@@ -14,5 +14,5 @@ for el in even_nums:
     nums2.append(el ** 2)
 
 print(numbers)
-print(even_nums)
-print(nums2)
+print('Парні числа: ' + str(even_nums))
+print('' + str(nums2))

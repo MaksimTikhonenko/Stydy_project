@@ -1,5 +1,5 @@
 # 3_task_list_comprehension
-
+пш
 Adjectives = ['Adult', 'Cloudy', 'Golden', 'Horrible', 'National', 'Pleased', 'Careful', 'Comparative']
 Adjectives_2 = []
 

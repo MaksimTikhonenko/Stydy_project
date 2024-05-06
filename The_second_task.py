@@ -5,6 +5,8 @@ Basic_phrases = ["basic phrases", "thank you", "excuse me", "i’m sorry", "good
                  "where are you from?", "what do you do?", "how old are you?", "i don’t understand"]
 Updated_list = []
 
+def norm_list()
+
 for el in Basic_phrases:
   el_titled = el.title()
   

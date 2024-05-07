@@ -2,18 +2,26 @@
 
 market = [("fruit", "apple"), ("fruit", "banana"), ("vegetable", "potato"), ("vegetable", "tomato"), ("fruit", "mango"),
           ("vegetable", "cucumber"), ("fruit", "orange"), ("vegetable", "broccoli")]
-sort_market = {}
+#sort_market = dict(market)
 
-key1 = []
-key2 = []
-vol1 = []
-vol2 = []
+#sort_market.items()
 
-for a, b in market:
+#sort_market = {k: v for k, v in market}
+key = []
+values =[]
+for k, v in market:
+    print(k, v)
+    if k == k:
+        key.append(k)
 
-    if a == "fruit":
-        key1.append(a)
-    if a == "vegetable":
-        key2.append(a)
+    if v == v:
+        values.append(v)
+    #print(key)
+    #print(values)
+    #if k == k:
+        #sort_market.(k)
 
-    print(key1)
+    #sort_market.items()
+
+#print(k, v)
+

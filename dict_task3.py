@@ -2,11 +2,7 @@
 
 market = [("fruit", "apple"), ("fruit", "banana"), ("vegetable", "potato"), ("vegetable", "tomato"), ("fruit", "mango"),
           ("vegetable", "cucumber"), ("fruit", "orange"), ("vegetable", "broccoli")]
-sort_market = {}
-
-#sort_market.items()
-
-#sort_market = {k: v for k, v in market}
+#sort_market = {}
 
 #for k, v in market:
     #if sort_market.get(k):
@@ -15,7 +11,8 @@ sort_market = {}
         #sort_market[k] = [v]
 #print(sort_market)
 
-key = {k for k in market}
-sort_market = {k:[v] for k,v in key if k in key}
+kv = set({k: [v] for k, v in market})
 
-print(key)
+
+print(kv)
+#print(sort_market)

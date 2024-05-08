@@ -24,8 +24,8 @@
 #print("\n\nRecursion Приклад Results")
 #tri_recursion(10)
 
-dct = {'Alice': 34, 'Bob': 27, 'John': 45}
+#dct = {'Alice': 34, 'Bob': 27, 'John': 45}
 
-x = dct['Alice']
+#x = dct['Alice']
 
-print(x)
+#print(x)

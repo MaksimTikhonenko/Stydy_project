@@ -15,10 +15,10 @@ numbers = [random.randint(1, 100) for _ in range(25)]
 
 # list comprehension
 
-even_nums = [num for num in numbers if num % 2 ==0]
+even_nums = [num for num in numbers if num % 2 == 0]
 
 nums2 = [el ** 2 for el in even_nums]
 
-print('Початковий список: '+str(numbers))
+print('Початковий список: ' +str(numbers))
 print('Парні числа: ' + str(even_nums))
 print('Парні числа у квадраті: ' + str(nums2))

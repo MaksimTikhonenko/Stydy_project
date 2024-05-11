@@ -2,19 +2,18 @@ num = [("integer", 5), ("float", 3.2), ("integer", 15), ("float", 7.5), ("intege
        ("integer", 8), ("float", 7.9), ("integer", 3), ("float", 9.1), ("integer", 20), ("float", 4.9)]
 sort_num = {}
 
-for k, v in num:
-    if sort_num.get(k):
-        sort_num.get(k).append(v)
-    else:
-        sort_num[k] = [v]
-    for n in [v]:
-        if n == {int}:
-            sort_num.get(v)
-        else:
-            sort_num.update(v or (n + v))
 
-v = sort_num.values()
+#num = [] #створив список кортежів (кожен кортеж містить тип, число) ++++++
+#
+# num_k = (...) # перебрати список кортежів та витягти тип ++++
+# num_v = (...) # перебрати список кортежів та витягти суму значень для кожного типу +++++
 
+#sort_num = {} # кінцевий результат. Словник (тип: сума значень для кожного типу) ++++++
 
-print(v)
+num_k = {x[0] for x in num}
+
+for k in num_k:
+       v = {y[1]for y in num if y[0] == k}
+       sort_num[k] = sum(v)
+
 print(sort_num)

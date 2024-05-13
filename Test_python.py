@@ -29,3 +29,12 @@
 #x = dct['Alice']
 
 #print(x)
+def custom_sum(lst):
+    total = 0
+    for element in lst:
+        total += element
+    return total
+
+my_list = [3, 8, 2, 10, 5]
+result = custom_sum(my_list)
+print(result)

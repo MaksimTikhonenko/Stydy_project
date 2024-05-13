@@ -19,11 +19,6 @@ def find_average(lst):
     a = sum(lst)
     b = len(lst)
     result = (a / b)
-    print("Середнє значення: " +str(result))
+    print("Середнє значення: " + str(result))
 
 find_average(num)
-
-# Завдання 3: Знайти найдовший ключ у словнику
-
-#def find_longest_key(dct):
-    #a = dct

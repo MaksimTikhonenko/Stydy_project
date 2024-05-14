@@ -12,7 +12,6 @@ dictionary = {
     }
 
 def find_longest_key(dct):
-    keys = list(dct.keys())
     max_key = ""
     for k in dct:
         if len(k) > len(max_key):

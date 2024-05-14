@@ -1,4 +1,4 @@
-# Завдання 1: Знайти максимальний та мінімальний елемент у списку
+# Завдання 1: Знайти максимальний та мінімальний елемент у списку + find_max_min_basic
 
 def find_max_min(lst):
     max_number = lst[0] # max_number = max(list)
@@ -24,10 +24,10 @@ def find_average(lst):
         a += x
 
     b = 0
-    for y in lst:
-        b1 = (b + y == 1)
+    for y in lst: # Змінна 'у' залишається по за циклом
+        b += 1
 
-    result = (a / b1)
+    result = a / b
     print("Середнє значення: " + str(result))
 
 find_average(num)

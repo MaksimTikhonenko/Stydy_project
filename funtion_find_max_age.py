@@ -8,7 +8,7 @@ students = [
     {"Science": ("Eve", 12, 23)},
     {"History": ("Frank", 8, 20)},
     {"History": ("Grace", 11, 21)},
-    {"History": ("Heidi", 10, 22)},
+    {"History": ("Heidi", 2, 22)},
     {"Science": ("Ivan", 11, 21)},
     {"Math": ("Judy", 10, 22)},
 ]
@@ -16,11 +16,10 @@ students = [
 result = {}
 def find_max_age(lst):
     for class_students in lst:
-        category = tuple(class_students.keys())
-        v = list(class_students.values())
-        tupl = v[0]
-        name = tupl[0]
-        age = tupl[2]
+        category = tuple(class_students.keys())[0]
+        name, scor, age = class_students[category]
+        if scor < 10:
+            continue
 
         m = result.get(category)
 

@@ -1,6 +1,6 @@
 # Завдання 1: Знайти максимальний та мінімальний елемент у списку + find_max_min_basic
 
-def find_max_min(lst):
+def find_max_min(lst): # todo об'єднати max and min
     max_number = lst[0] # max_number = max(list)
     for num in lst:
         if num > max_number:
@@ -14,7 +14,7 @@ def find_max_min(lst):
 
 num = [3, 1, 4, 1, 5, 9.5, 0, 2, 6, 5, 3, -3, 5]
 
-#find_max_min(num)
+find_max_min(num)
 
 # Завдання 2: Знайти середнє значення у списку + find_average_basic
 

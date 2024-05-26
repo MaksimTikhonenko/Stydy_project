@@ -5,6 +5,7 @@ def is_float(val):
     except ValueError:
         return False
 
+
 with open('input.txt', 'r') as file:
     lines = file.readlines()
 

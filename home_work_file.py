@@ -8,7 +8,7 @@ def is_float(val):
         return False
 
 
-with open('input.txt', 'r') as file:
+with open('input.txt', 'r') as file:    # todo Вичитати кожну лінію окремо
     lines = file.readlines()
 
 for line in lines:

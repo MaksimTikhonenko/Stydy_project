@@ -31,7 +31,7 @@ print('Ms: ' + str(dt.microsecond))
 dt_a = datetime(1983, 1, 5, 13, 45)
 dt_now = datetime.now()
 
-diff = dt_now - dt_a # difference
+diff = dt_now - dt_a  # difference
 print()
 print('Time difference: ' + str(diff))
 print('Days: ' + str(diff.days))

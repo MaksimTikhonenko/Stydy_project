@@ -1,14 +1,12 @@
-# Фільтрація списку товарів
+#   Фільтрація списку товарів
 
-from datetime import datetime, date, time, timedelta
-
-
-dt_now = datetime.now()  # Дата на данний момент
-
-
+from datetime import datetime
 
 el_dt = []
 eat = ['овочі', 'молочні продукти']
+result_filter = []
+
+dt_now = datetime.today()  # Дата на данний момент
 
 with open('csv_file.csv', newline='', encoding='utf-8') as file:
     line = file.readline()
@@ -17,40 +15,21 @@ with open('csv_file.csv', newline='', encoding='utf-8') as file:
         sp = [x.strip() for x in line.split(';')]
         if sp[1] in eat:
             el_dt.append(sp)  # До цього рядка (включно) працює коректно.
-#  todo:Попробувати о'єднати \23 та \25 в один +++
-        #dt_x = [datetime.strptime(str(y[-1]), "%Y-%m-%d") for y in el_dt]
+        line = file.readline()  # Остання стрічка коду
 
-        # dt_str = [str(dt[-1]) for dt in el_dt]  # Видає формат list[list[str]]!!!! (todo: Зробити щоб виводився лише str) +++
-        #
-        # dt_obj = datetime.strptime(dt_str[-1], "%Y-%m-%d")  # Перетворення str в datetime
+#   Перетворення str в datetime, різниця в даті, запис продуктів у яких закінчується термін придатності через 7д
+for w in el_dt:
+    dt = datetime.strptime(w[-1], '%Y-%m-%d')
+    delta = [(dt - dt_now)]
+    for q in delta:
+        if q.days <= 7 and q.days > 0:
+            out_line = f"{w[0]};{w[1]};{w[2]};{q.days};"
+            result_filter.append(out_line)
 
-        #  TODO: Замінити елемент strdate на datetime в зміній el_dt
-    for w in el_dt:
-        for count, date_str in enumerate(w):
-            w[count] = datetime.strptime(date_str, '%Y-%m-%d')
+#   Cтвореня файлу та запис результату нашої програми (артікул;категорія;назва;днів до непридатності)
+with open('result_filter.csv', 'w', encoding='utf-8') as file:
+    for i in result_filter:
+        file.writelines(i + "\n")
 
-
-        #if dt_str in el_dt:
-            #el_dt.pop(dt_str[-1]) and el_dt.append(dt_obj)
-
-       #el_dt.pop(-1) and el_dt.append(dt_obj)
-        print(el_dt)
-
-
-        line = file.readline()  #  Остання стрічка коду
-
-
-# todo порівняти всі змінні з поточною датою, та виписати ті товари у яких закінчується
-#  строк придатності через тиждень або раніше
-
-
-
-# todo створити файл у який запишуться результати нашої програми (артікул;категорія;назва;днів до непридатності)
-# Приклад вихідного файлу:
-#артікул;категорія;назва;днів до непридатності
-# 005;овочі;Помідори;6
-# 006;молочні продукти;Сир;3
-# 009;овочі;Цибуля;0
-# 018;молочні продукти;Масло;4
-# 034;молочні продукти;Сир;1
-
+print("Список продуктів у яких закінчується термін придатності через 7 днів або раніше: " + "\n"
+      + str(result_filter) + "\n\n" + "Цей результат записаний у файл: 'result_filter.csv'")

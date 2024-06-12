@@ -6,12 +6,12 @@ Basic_phrases = ["basic phrases", "thank you", "excuse me", "i’m sorry", "good
 Updated_list = []
 
 for el in Basic_phrases:
-  el_titled = el.title()
+    el_titled = el.title()
   
-  for idx in range(1, len(el_titled)):
-    if el_titled[idx-1] == "’":
-      el_titled = el_titled[:idx] + el_titled[idx].lower() + el_titled[idx+1:]
+    for idx in range(1, len(el_titled)):
+        if el_titled[idx-1] == "’":
+            el_titled = el_titled[:idx] + el_titled[idx].lower() + el_titled[idx+1:]
 
-  Updated_list.append(el_titled)
+    Updated_list.append(el_titled)
 
 print(Updated_list)

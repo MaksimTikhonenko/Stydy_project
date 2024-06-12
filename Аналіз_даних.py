@@ -6,7 +6,7 @@ list_dct = [{'author': 'Tolkien', 'book': 'The Hobbit', 'pages_count': 310},
             {'author': 'Tolkien', 'book': 'The Lord of the Rings', 'pages_count': 1178},
             {'author': 'Orwell', 'book': 'Animal Farm', 'pages_count': 112}]
 # Вихідні дані:
-result = {} # Словник що містить ключ = 1 значення (ім'я автора) : кортеж (2 значення, 3 значення)
+result = {}  # Словник що містить ключ = 1 значення (ім'я автора) : кортеж (2 значення, 3 значення)
 
 for author_book in list_dct:
     author = author_book['author']

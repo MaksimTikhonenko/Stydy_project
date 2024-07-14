@@ -28,4 +28,3 @@ for author_book in list_dct:
     result[author] = (book, pagescount)
 
 print(result)
-

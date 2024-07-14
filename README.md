@@ -1,1 +1,4 @@
-Домашнє завдання 2024/05/04
+------Корисні команди------
+
+pytest 
+pytest --cov=my_func --cov-report=html

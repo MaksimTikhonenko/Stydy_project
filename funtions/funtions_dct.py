@@ -11,11 +11,13 @@ dictionary = {
     "pomegranate": 3,
     }
 
+
 def find_longest_key(dct):
     max_key = ""
     for k in dct:
         if len(k) > len(max_key):
             max_key = k
     print("Найдовший ключ : " + str(max_key))
+
 
 find_longest_key(dictionary)

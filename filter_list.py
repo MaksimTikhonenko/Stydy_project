@@ -8,7 +8,7 @@ result_filter = []
 
 dt_now = datetime.today()  # Дата на данний момент
 
-with open('csv_file.csv', newline='', encoding='utf-8') as file:
+with open('txt_file/csv_file.csv', newline='', encoding='utf-8') as file:
     line = file.readline()
     while line:
         line.strip()
@@ -27,7 +27,7 @@ for w in el_dt:
             result_filter.append(out_line)
 
 #   Cтвореня файлу та запис результату нашої програми (артікул;категорія;назва;днів до непридатності)
-with open('result_filter.csv', 'w', encoding='utf-8') as file:
+with open('txt_file/result_filter.csv', 'w', encoding='utf-8') as file:
     for i in result_filter:
         file.writelines(i + "\n")
 

@@ -13,11 +13,11 @@ market = [("fruit", "apple"), ("fruit", "banana"), ("vegetable", "potato"), ("ve
 
 sort_market = {}
 
-categ = {x[0] for x in market} # витягти set з market
+categ = {x[0] for x in market}  # витягти set з market
 
 
-for cat in categ: # Перебираємо categ та формуємо змінну cat, та витягуємо категорії    # Перебираємо всі елементи в змінній cat та формуємо змінну el
-    el = [a[1] for a in market if a[0] == cat]
+for cat in categ:  # Перебираємо categ та формуємо змінну cat, та витягуємо категорії
+    el = [a[1] for a in market if a[0] == cat]  # Перебираємо всі елементи в змінній cat та формуємо змінну el
     sort_market[cat] = el
 
 print(sort_market)

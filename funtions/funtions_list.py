@@ -11,7 +11,9 @@ def find_max_min(lst):  # todo об'єднати max and min
         if n < min_number:
             min_number = n
 
-    print('max : '+str(max_number), "\n" 'min : '+str(min_number))
+    result = 'max : '+str(max_number) + "\n" 'min : '+str(min_number)
+
+    return result
 
 
 nums = [3, 1, 4, 1, 5, 9.5, 0, 2, 6, 5, 3, -3, 5]
@@ -31,7 +33,7 @@ def find_average(lst):
         b += 1
 
     result = a / b
-    print("Середнє значення: " + str(result))
+    return result
 
 
 find_average(nums)
